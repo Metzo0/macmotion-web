@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#061331">
+    <title>MacMotion Convert</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div class="app-mark" aria-hidden="true">↻</div>
+        <p class="eyebrow">LOCAL VIDEO CONVERSION</p>
+        <h1>MacMotion Convert</h1>
+        <p class="lede">MOV in. Google-friendly MP4 out.</p>
+      </header>
+
+      <section class="glass-card" aria-labelledby="choose-title">
+        <div class="step"><span>1</span><h2 id="choose-title">Choose your movie</h2></div>
+        <label class="drop-zone" id="drop-zone" for="movie">
+          <input id="movie" type="file" accept="video/quicktime,.mov">
+          <span class="film-icon">▣</span>
+          <strong id="file-label">Drop a MOV here or browse</strong>
+          <small>Original file stays untouched</small>
+        </label>
+      </section>
+
+      <section class="glass-card" aria-labelledby="quality-title">
+        <div class="step"><span>2</span><h2 id="quality-title">Pick export quality</h2></div>
+        <div class="quality-options" role="radiogroup" aria-label="Export quality">
+          <label class="quality-option">
+            <input type="radio" name="quality" value="compact">
+            <span><strong>Compact 720p</strong><small>Smaller upload · H.264 + AAC</small></span>
+          </label>
+          <label class="quality-option chosen">
+            <input type="radio" name="quality" value="standard" checked>
+            <span><strong>Standard quality</strong><small>Preserves resolution · H.264 + AAC</small></span>
+          </label>
+        </div>
+      </section>
+
+      <button id="convert" class="convert-button" disabled>
+        <span id="button-label">Convert to MP4</span>
+      </button>
+      <p id="status" class="status" aria-live="polite">Runs only on this Mac. Nothing is uploaded to a cloud service.</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
