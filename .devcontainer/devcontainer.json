@@ -1,0 +1,12 @@
+{
+  "name": "MacMotion Web",
+  "image": "mcr.microsoft.com/devcontainers/java:1-17-bookworm",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ffmpeg",
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "MacMotion Web",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
